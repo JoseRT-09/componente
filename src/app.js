@@ -40,10 +40,7 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log('=================================================');
-    console.log('   Inventory Component CBSE - INICIADO');
     console.log(`   Puerto: ${PORT}`);
     console.log(`   Storage: ${STORAGE_TYPE}`);
     console.log(`   URL: http://localhost:${PORT}/api/inventory/`);
-    console.log('=================================================');
 });

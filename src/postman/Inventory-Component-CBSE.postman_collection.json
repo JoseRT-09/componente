@@ -1,0 +1,86 @@
+{
+  "info": {
+    "name": "Inventory Component CBSE",
+    "_postman_id": "inventory-cbse-001",
+    "description": "Colección completa para probar el componente de gestión de inventario",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "01 - Info del Componente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/inventory/",
+          "host": ["{{base_url}}"],
+          "path": ["api", "inventory", ""]
+        }
+      }
+    },
+    {
+      "name": "02 - Estado del Componente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/inventory/status",
+          "host": ["{{base_url}}"],
+          "path": ["api", "inventory", "status"]
+        }
+      }
+    },
+    {
+      "name": "03 - Agregar Laptop",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": \"PROD001\",\n  \"name\": \"Laptop Dell Inspiron 15\",\n  \"quantity\": 10,\n  \"price\": 15000.50,\n  \"category\": \"electronics\",\n  \"description\": \"Laptop profesional Intel Core i7, 16GB RAM, 512GB SSD\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/inventory/items",
+          "host": ["{{base_url}}"],
+          "path": ["api", "inventory", "items"]
+        }
+      }
+    },
+    {
+      "name": "10 - Listar Todos los Ítems",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/inventory/items",
+          "host": ["{{base_url}}"],
+          "path": ["api", "inventory", "items"]
+        }
+      }
+    },
+    {
+      "name": "20 - Obtener Estadísticas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/inventory/statistics",
+          "host": ["{{base_url}}"],
+          "path": ["api", "inventory", "statistics"]
+        }
+      }
+    }
+  ]
+}
