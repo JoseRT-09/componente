@@ -1,14 +1,20 @@
 {
-  "name": "inventario",
+  "name": "inventory-component-cbse",
   "version": "1.0.0",
-  "description": "componente",
-  "main": "index.js",
+  "description": "Componente de gestión de inventario basado en principios CBSE",
+  "main": "src/app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
   },
+  "keywords": ["cbse", "component", "inventory", "software-engineering"],
   "author": "jose",
   "license": "MIT",
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
